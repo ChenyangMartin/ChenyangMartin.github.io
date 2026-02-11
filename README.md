@@ -1,2 +1,2 @@
-# ChenyangWang.github.io
-CV for Chenyang Wang
+# ChenyangMartin.github.io
+Personal website for Chenyang Wang
