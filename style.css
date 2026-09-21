@@ -28,12 +28,6 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
-header {
-    text-align: center;
-    padding: 50px;
-    background: #eee;
-}
-
 section {
     max-width: 900px;
     margin: 40px auto;
@@ -48,10 +42,83 @@ footer {
 }
 
 
-.profile-photo {
-    width: 600px;          /* adjust size if needed */
-    height: auto;          
-    display: block;        /* centers the image */
-    margin: 0 auto 20px;   /* space below the image */
+/* ===== HOME PAGE TWO-COLUMN LAYOUT ===== */
+
+.profile-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 30px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
 }
 
+/* LEFT: PHOTO */
+.profile-left {
+    width: 380px;
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+/* RIGHT: TEXT */
+.profile-right {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-right h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 34px;
+}
+
+.job-title {
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 18px;
+    color: #555;
+}
+
+.profile-right h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.profile-right p {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+
+/* MOBILE VERSION */
+
+@media (max-width: 800px) {
+
+    .profile-container {
+        flex-direction: column;
+        margin: 30px auto;
+        gap: 30px;
+    }
+
+    .profile-left {
+        width: 100%;
+    }
+
+    .profile-photo {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .profile-right {
+        width: 100%;
+    }
+}
